@@ -5,7 +5,7 @@ h1{
     color:red;
     text-align: center;
 }
-.container_tasks{
+.tasks{
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     width:400px;
     background-color:white;
@@ -14,7 +14,7 @@ h1{
     margin: 0 auto;
     color:grey;
 }
-.new_task{
+.task_new{
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
 }
@@ -28,7 +28,7 @@ h1{
     padding: 10px 1px 10px 10px;
     color:black;
 }
-.container_filter{
+.filters{
     font-size: 10pt;
     height:20px;
     display:inline-block;
