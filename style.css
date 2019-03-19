@@ -18,6 +18,9 @@ h1{
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
 }
+.task_add_new{
+    border:transparent;
+}
 .task_completed{
     text-decoration:line-through;
     border-bottom: 1px solid grey;
