@@ -12,14 +12,13 @@
 
 <div class="tasks">
 	<div class="task_new">
-		<label for="task_add_new"> ˅ </label>
-		<em><input id="task_add_new" placeholder="What needs to be done?" onkeypress="add_task()"></em>
+		<label class="task_label_add_new" for="task_add_new"> ˅ </label>
+		<input class="task_add_new" placeholder="What needs to be done?" onkeypress="addTask()">
 	</div> 
 	<div class="task_completed">
-		<input type="checkbox">
-		<label id="resultTask"></label>
+		<input type="checkbox" class="task_checkbox">
+		<label for="task_checkbox" class="task_label_result" onchange="show_task()"></label>
 	</div>
-	<div class="task_active"><input type="radio">to learn CSS</div>
 
 	<div class="filters">
 		<div class="filter_quantity_tasks">2 items left</div>
