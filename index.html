@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-<meta charset="utf-8">
-<link href="style.css" rel="stylesheet">
-</head>
+	<head>
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet">
+	</head>
 
-<body>
+	<body>
 
-<h1>todos</h1>
+		<h1>todos</h1>
 
-<div class="tasks">
-	<div class="task_new">
-		<label class="task_label_add_new" for="task_add_new"> ˅ </label>
-		<input class="task_add_new" placeholder="What needs to be done?" onkeypress="addTask()">
-	</div> 
-	<div class="task_completed">
-		<input type="checkbox" class="task_checkbox">
-		<label for="task_checkbox" class="task_label_result" onchange="show_task()"></label>
-	</div>
+		<div class="tasks">
 
-	<div class="filters">
-		<div class="filter_quantity_tasks">2 items left</div>
-		<div class="filter_show bordered">All</div>
-		<div class="filter_show">Active</div>
-		<div class="filter_show">Completed</div>
-		<div class="filter_delete">Clear completed</div>
-	</div>
-</div>
+			<div class="task_new">
+				<label class="task_label_add_new" for="task_add_new"> ˅ </label>
+				<input class="task_add_new" placeholder="What needs to be done?"
+					onkeypress="addTask(event)">
+			</div>
 
-<script src="add_tasks.js"></script>
-</body>
+			<div class="task_completed">
+				<input type="checkbox" class="task_checkbox">
+				<label for="task_checkbox" class="task_label_result"
+					onchange="show_task()"></label>
+			</div>
+
+			<div class="filters">
+				<div class="filter_quantity_tasks"><label class="task_label_count">
+					</label> items left</div>
+				<div class="filter_show bordered">All</div>
+				<div class="filter_show">Active</div>
+				<div class="filter_show">Completed</div>
+				<div class="filter_delete"><button class="filter_btn_delete"
+					onclick="deleteCompletedTask()">Clear completed</button></div>
+			</div>
+		</div>
+
+		<script src="add_tasks.js"></script>
+	</body>
 </html>

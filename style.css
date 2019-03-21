@@ -17,10 +17,10 @@ h1{
 .task_new{
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
-    font-style:italic;
 }
 .task_add_new{
     border:transparent;
+    font-style:italic;
 }
 .task_checkbox:checked ~.task_label_result {
     text-decoration:line-through;
