@@ -17,15 +17,22 @@ function addTask(e) {
 
 function showTask() {
 
+    var taskIn=document.body.getElementsByClassName('task_all');
+document.body.insertBefore;
     for (var i = 0; i < arrayTasks.length; i++) {
+        // taskIn[i].innerHTML="<div class="task_all">
+        // <input type="checkbox" class="task_checkbox">
+        // <label for="task_checkbox" class="task_label_result">
+        // </label></div>";
+        
         document.getElementsByClassName('task_label_result')[0]
             .innerHTML = arrayTasks;
     }
 }
 
 function deleteCompletedTask() {
-    
-    var container = document.querySelectorAll('.task_completed');
+
+    var container = document.querySelectorAll('.task_all');
 
     for(var i=0; i<container.length;i++){
         var childTask=container[i].firstElementChild;

@@ -24,10 +24,11 @@ h1{
 }
 .task_checkbox:checked ~.task_label_result {
     text-decoration:line-through;
+    color:grey;
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
 }
-.task_completed{
+.task_all{
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
     color:black;
