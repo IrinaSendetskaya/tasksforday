@@ -5,7 +5,7 @@ h1{
     color:coral;
     text-align: center;
 }
-.tasks{
+.application_content{
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     width:400px;
     background-color:white;
@@ -22,20 +22,31 @@ h1{
     border:transparent;
     font-style:italic;
 }
-.task_checkbox:checked ~.task_label_result {
-    text-decoration:line-through;
-    color:grey;
-    padding: 10px 1px 10px 10px;
-}
 .task_all{
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
     color:black;
 }
+.task_checkbox:checked ~.task_label_checkbox{
+    text-decoration:line-through;
+    color:grey;
+    padding: 10px 1px 10px 10px;
+}
 .task_active{
     border-bottom: 1px solid grey;
     padding: 10px 1px 10px 10px;
     color:black;
+}
+.task_active:hover .task_button_delete{
+    visibility: visible;
+    border: transparent;
+    background: inherit;
+    color:red;
+    float: right;
+}
+.task_button_delete{
+    float: right;
+    visibility: hidden;
 }
 .filters{
     font-size: 10pt;
@@ -64,7 +75,8 @@ h1{
     margin-left: 10px;
     text-align: right;
 }
-.filter_btn_delete{
+.filter_button_delete{
     border: transparent;
     background: inherit;
+    color:inherit;
 }
