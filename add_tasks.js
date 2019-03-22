@@ -7,37 +7,40 @@ function addTask(e) {
 
         showTask();
         document.getElementsByClassName("task_add_new")[0].value = "";
-        console.log("Pressed " + arrayTasks);
-        console.log("CountTasks " + arrayTasks.length);
-        document.getElementsByClassName('task_label_count')[0]
-        .innerHTML = arrayTasks.length;
     }
 
 }
 
 function showTask() {
 
-    var taskIn=document.body.getElementsByClassName('task_all');
-document.body.insertBefore;
-    for (var i = 0; i < arrayTasks.length; i++) {
-        // taskIn[i].innerHTML="<div class="task_all">
-        // <input type="checkbox" class="task_checkbox">
-        // <label for="task_checkbox" class="task_label_result">
-        // </label></div>";
-        
-        document.getElementsByClassName('task_label_result')[0]
-            .innerHTML = arrayTasks;
-    }
+    var parentElem = document.body.getElementsByClassName("tasks_all")[0];
+    var div = document.createElement('div');
+    div.className = 'task_active';
+    div.innerHTML = '<input type="checkbox" class="task_checkbox"><label class="task_label_result"></label>'
+    parentElem.insertBefore(div, parentElem.firstChild);
+
+    document.getElementsByClassName('task_label_result')[0].innerHTML = arrayTasks[0];
+
+    countTasks();
 }
 
 function deleteCompletedTask() {
 
-    var container = document.querySelectorAll('.task_all');
+    var container = document.querySelectorAll('.task_active');
 
-    for(var i=0; i<container.length;i++){
-        var childTask=container[i].firstElementChild;
-        if(childTask.matches(':checked')){
+    for (var i = 0; i < container.length; i++) {
+        var childTask = container[i].firstElementChild;
+        if (childTask.matches(':checked')) {
+            var deleteLabel = container[i].getElementsByClassName("task_label_result")[0].innerHTML;
+            var indexDelete = arrayTasks.indexOf(deleteLabel);
+            arrayTasks.splice(indexDelete, 1);
             var deleteElement = container[i].remove();
         }
+        countTasks();
     }
+}
+
+function countTasks() {
+    document.getElementsByClassName('task_label_count')[0]
+        .innerHTML = arrayTasks.length;
 }
