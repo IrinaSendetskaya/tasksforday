@@ -22,10 +22,13 @@
 			<div class="filters">
 				<div class="filter_quantity_tasks"><label class="task_label_count">
 					</label> items left</div>
-				<div class="filter_show bordered">All</div>
-				<div class="filter_show">Active</div>
-				<div class="filter_show">Completed</div>
-				<div class="filter_delete"><button class="filter_button_delete"
+				<div class="filter_show"><button class="filter_button"
+					onclick="filterAllTasks(event)">All</button></div>
+				<div class="filter_show"><button class="filter_button"
+					onclick="filterActiveTasks(event)">Active</button></div>
+				<div class="filter_show"><button class="filter_button"
+					onclick="filterCompletedTasks(event)">Completed</button></div>
+				<div class="filter_delete"><button class="filter_button"
 					onclick="deleteCompletedTask()">Clear completed</button></div>
 			</div>
 		</div>
